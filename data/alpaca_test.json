@@ -33,6 +33,10 @@
         "instruction": "Explain why the following fraction is equivalent to 1/4",
         "input": "4/16",
         "output": "The fraction 4/16 is equivalent to 1/4 because both numerators and denominators are divisible by 4. Dividing both the top and bottom numbers by 4 yields the fraction 1/4."
+    },
+    {
+        "instruction": "Edit the paragraph to follow formal writing standards.",
+        "input": "Dustin and carmen are siblings. they like to hangout every saturday.",
+        "output": "Dustin and Carmen are siblings who like to hang out every Saturday."
     }
-    
 ]

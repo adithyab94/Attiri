@@ -1,2 +1,4 @@
 test.py
 alpaca_data.json
+data/csv
+*.ipynb

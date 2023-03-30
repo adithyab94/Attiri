@@ -53,7 +53,7 @@ class AlpacaDataProcessor:
         Translate the data from the source language to the target language
         """
         my_translator = GoogleTranslator(source=source, target=target)
-        for key in tqdm(self.data.keys()):
+        for key in tqdm(self.data.keys()) :
             translated_data = {}
             data = self.data[key]
             for value in data.values():
@@ -86,7 +86,10 @@ class AlpacaDataProcessor:
 def main(source: str, target: str, input_file: str, output_file: str) -> None:
     data = AlpacaDataProcessor(input_file)
     data.load()
-    data.get_translated_dict_list(source=source, target=target)
+    try:
+        data.get_translated_dict_list(source=source, target=target)
+    except Exception as e:
+        ValueError(e)
     data.save(output_file)
 
 
