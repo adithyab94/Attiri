@@ -37,7 +37,7 @@ conda create --name attiri python=3.9
 Activate the new environment:
 
 ```bash
-conda activate alpaca_translation
+conda activate attiri
 ```
 
 ```bash
