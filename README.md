@@ -96,6 +96,9 @@ python attiri_data.py -t de alpaca_data.json output.json
 
 Note that the program may take some time to run, especially for large input files or when translating to many different languages.
 
+## Acknowledgments
+
+We would like to express our gratitude to the [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca) team for their work in building an instruction-following LLaMA model and the dataset. Our project, Attiri, is an extension of their work to include the Tamil language.
 
 ## License
 This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
