@@ -8,6 +8,7 @@ Attiri: Tamil Stanford Alpaca. An Instruction-following LLaMA Model
 - [Dataset](#dataset)
 - [Setup](#setup)
 - [Usage](#usage)
+- [License](#license)
 
 ## Preparation
 
@@ -77,3 +78,7 @@ python attiri_data.py -t de alpaca_data.json output.json
 ```
 
 Note that the program may take some time to run, especially for large input files or when translating to many different languages.
+
+
+## License
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
