@@ -1,7 +1,6 @@
 <p align="center" width="100%">
 </p>
 
-
 # Attiri
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/adithyab94/Attiri/blob/main/LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
@@ -12,6 +11,7 @@ Attiri: Tamil Stanford Alpaca. An Instruction-following LLaMA Model
 Attiri, an extension of the LLaMa, aims to build and share an instruction-following LLaMA model for the Tamil language. Our project includes the similar 52K data used for fine-tuning the original model but in Tamil language, as well as the code for generating the data and fine-tuning the model. As of now, our live demo is under development and will be available soon.
 
 The repository contains
+
 - Dataset
 - Code to generate the data
 
@@ -101,4 +101,5 @@ Note that the program may take some time to run, especially for large input file
 We would like to express our gratitude to the [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca) team for their work in building an instruction-following LLaMA model and the dataset. Our project, Attiri, is an extension of their work to include the Tamil language.
 
 ## License
+
 This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
