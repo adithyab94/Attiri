@@ -10,7 +10,7 @@ class AlpacaDataProcessor:
     def __init__(self, filename: str) -> None:
         """
         :param filename: The name of the file to be loaded
-        
+
         Initialize the class with the filename
         """
         self.filename = filename
@@ -24,7 +24,7 @@ class AlpacaDataProcessor:
         """
         with open(self.filename, "r") as f:
             self.data_raw = json.load(f)
-            self.data = {ind : item for ind, item in enumerate(self.data_raw)}
+            self.data = {ind: item for ind, item in enumerate(self.data_raw)}
 
     def get_translated_dict_list(self, source, target) -> List:
         """
@@ -66,14 +66,16 @@ class AlpacaDataProcessor:
                     if data["input"].isnumeric():
                         translated_data["input"] = data["input"]
                     else:
-                        translated_data["input"] = my_translator.translate(text=data["input"])
+                        translated_data["input"] = my_translator.translate(
+                            text=data["input"]
+                        )
                     if data["output"].isnumeric():
                         translated_data["output"] = data["output"]
                     else:
-                        translated_data["output"] = my_translator.translate(text=data["output"])
+                        translated_data["output"] = my_translator.translate(
+                            text=data["output"]
+                        )
             yield translated_data
-
-
 
 
 @click.command()
