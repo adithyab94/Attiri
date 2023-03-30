@@ -21,26 +21,13 @@ The repository contains
 
 ## Table of Contents
 
-- [Preparation](#preparation)
-- [Dataset](#dataset)
-- [Setup](#setup)
-- [Usage](#usage)
-- [License](#license)
+1. [Preparation](#preparation)
+   1. [Setup](#setup)
+   2. [Dataset](#dataset)
+2. [Usage](#usage)
+3. [License](#license)
 
 ## Preparation
-
-This is a Python program that translates instruction data for the Alpaca dataset from one language to another using the Google Translate API. The program is built with Click and tqdm for command-line argument parsing and progress tracking, respectively.
-
-### Dataset
-
-The Alpaca dataset consists of programming problems and their associated input/output examples. The dataset is available in JSON format, with each problem represented by a dictionary containing the following keys:
-
-instruction: a text description of the problem
-input: an example input for the problem
-output: the expected output for the problem
-program: a sample program that solves the problem (optional)
-code: the code used to generate the problem (optional)
-The program currently supports translation of the instruction, input, and output fields. The other fields (program and code) are ignored.
 
 ### Setup
 
@@ -62,6 +49,16 @@ conda activate attiri
 pip install -r requirements.txt
 ```
 
+### Dataset
+
+The Alpaca dataset consists of programming problems and their associated input/output examples. The dataset is available in JSON format, with each problem represented by a dictionary containing the following keys:
+
+instruction: a text description of the problem
+input: an example input for the problem
+output: the expected output for the problem
+
+``attiri_data.py`` translates instruction data for the Alpaca dataset from one language to another using the Google Translate API. The program is built with Click and tqdm for command-line argument parsing and progress tracking, respectively.
+
 To run the program, use the following command:
 
 ```bash
@@ -72,7 +69,7 @@ Replace [SOURCE] with the source language you want to translate from (e.g. en fo
 
 The -s option is optional and will default to automatic language detection if not specified. Note that the input file must exist, but the output file will be created by the program if it does not already exist. If the output file already exists, it will be overwritten.
 
-### Usage
+## Usage
 
 Here are some examples of how to use the program:
 
