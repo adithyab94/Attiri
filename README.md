@@ -6,12 +6,14 @@
   <br />
   Attiri: an instruction-following large language model for Tamil language by unlocking the power of LLaMa and Stanford Alpaca
 </h1>
-   
-<p align="center" width="100%">
-[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/adithyab94/Attiri/blob/main/LICENSE)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-</p>
+
+<div align="center">
+
+  <a href="">![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)</a>
+  <a href="">![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)</a>
+  <a href="">![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)</a>
+
+</div>
 
 Attiri, an extension of the LLaMa, aims to build and share an instruction-following LLaMA model for the Tamil language. Our project includes the similar 52K data used for fine-tuning the original model but in Tamil language, as well as the code for generating the data and fine-tuning the model. As of now, the project is under development and will be available soon.
 
