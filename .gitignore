@@ -2,3 +2,6 @@ test.py
 alpaca_data.json
 data/csv
 *.ipynb
+nomic
+*.csv
+data/data.jsonl

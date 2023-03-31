@@ -2,7 +2,9 @@
 <a href="https://adithyabalaji.notion.site/Attiri-A-LLaMa-Model-for-Tamil-d49b91e2d7704c3286fd4ac4c1934c18" target="_blank"><img src="assets/attiri_logo.png" alt="Stanford-Alpaca" style="width: 50%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
+<p align="center">
 # Attiri
+</p>
 
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/adithyab94/Attiri/blob/main/LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
@@ -16,6 +18,7 @@ The repository contains
 
 - Dataset
 - Code to generate the data
+- TODO: Code to fine tune LLaMA 7B and possible the the models including PaLM
 
 ## TODO
 
