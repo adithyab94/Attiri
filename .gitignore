@@ -5,3 +5,4 @@ data/csv
 nomic
 *.csv
 data/data.jsonl
+__pycache__

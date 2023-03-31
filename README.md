@@ -4,7 +4,7 @@
 
 <h1 align="center">
   <br />
-  Attiri: an instruction-following large language model for Tamil by unlocking LLaMa and Stanford Alpaca
+  Attiri: Dataset and an instruction-following large language model for Tamil by unlocking LLaMa and Stanford Alpaca
 </h1>
 
 <div align="center">
@@ -59,21 +59,21 @@ pip install -r requirements.txt
 
 ### Dataset
 
-The Alpaca dataset consists of programming problems and their associated input/output examples. The dataset is available in JSON format, with each problem represented by a dictionary containing the following keys:
-
-instruction: a text description of the problem
-input: an example input for the problem
-output: the expected output for the problem
+| S.No | Dataset | Description | Count | I/O    |
+|------|---------|-------------|-------|--------|
+| 1    | [Alpaca](data/attiri_alpaca_data.json)  | Tamil version of the Stanford Alpaca dataset | 52K| Instruction, Input, Output|
+| 2    | [Nomic]()  | Tamil version of the Nomic dataset | 500K | Prompt, Response|
+| 3    | [IndicCorp](https://ai4bharat.iitm.ac.in/corpora)| A single large text file containing one sentence per line. The publicly released version is randomly shuffled, untokenized and deduplicated. | 31.5M| Sentences|
 
 ``attiri_data.py`` translates instruction data for the Alpaca dataset from one language to another using the Google Translate API. The program is built with Click and tqdm for command-line argument parsing and progress tracking, respectively.
 
 To run the program, use the following command:
 
 ```bash
-python attiri_data.py -s [SOURCE] -t [TARGET] [INPUT FILE] [OUTPUT FILE]
+python attiri_data.py -s [SOURCE] -t [TARGET] -d [DATASET] [INPUT FILE] [OUTPUT FILE]
 ```
 
-Replace [SOURCE] with the source language you want to translate from (e.g. en for English), [TARGET] with the target language you want to translate to (e.g. fr for French), [INPUT FILE] with the path to the JSON input file, and [OUTPUT FILE] with the path to the JSON output file.
+Replace [SOURCE] with the source language you want to translate from (e.g. en for English), [TARGET] with the target language you want to translate to (e.g. fr for French), [INPUT FILE] with the path to the JSON input file, and [OUTPUT FILE] with the path to the JSON output file. Replace [DATASET] with the dataset you want to translate (e.g. ``alpaca`` or ``nomic``).
 
 The -s option is optional and will default to automatic language detection if not specified. Note that the input file must exist, but the output file will be created by the program if it does not already exist. If the output file already exists, it will be overwritten.
 
@@ -84,26 +84,14 @@ Here are some examples of how to use the program:
 Translate data from alpaca_data.json in English to French and save it to output.json:
 
 ```bash
-python attiri_data.py -s en -t fr alpaca_data.json output.json
-```
-
-Translate data from alpaca_data.json in English to Spanish and save it to alpaca_data_es.json:
-
-```bash
-python attiri_data.py -s en -t es alpaca_data.json alpaca_data_es.json
-```
-
-Automatically detect the source language and translate to German, saving the output to output.json:
-
-```bash
-python attiri_data.py -t de alpaca_data.json output.json
+python attiri_data.py -s en -t fr -d alpaca alpaca_data.json output.json
 ```
 
 Note that the program may take some time to run, especially for large input files or when translating to many different languages.
 
 ## Acknowledgments
 
-We would like to express our gratitude to the [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca) team for their work in building an instruction-following LLaMA model and the dataset. Our project, Attiri, is an extension of their work to include the Tamil language.
+Thanks for the open source projects - [LLaMA](https://github.com/facebookresearch/llama), [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca), and [Alpaca-Lora](https://github.com/tloen/alpaca-lora) from which this project is inspired.
 
 ## License
 
