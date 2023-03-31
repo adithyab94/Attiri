@@ -4,7 +4,7 @@
 
 <h1 align="center">
   <br />
-  Attiri: an instruction-following large language model for Tamil language by unlocking the power of LLaMa and Stanford Alpaca
+  Attiri: an instruction-following large language model for Tamil by unlocking LLaMa and Stanford Alpaca
 </h1>
 
 <div align="center">
