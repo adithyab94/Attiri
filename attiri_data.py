@@ -153,8 +153,8 @@ class NomicDataProcessor:
     help="Dataset to be translated (alpaca or nomic)",
     type=click.Choice(["alpaca", "nomic"]),
 )
-@click.argument("input_file", type=click.Path(exists=True))
-@click.argument("output_file", type=click.Path())
+@click.argument("--input_file", "-i", type=click.Path(exists=True))
+@click.argument("--output_file", "-o", type=click.Path())
 def main(
     source: str, target: str, dataset: str, input_file: str, output_file: str
 ) -> None:

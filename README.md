@@ -74,19 +74,24 @@ Attiri Nomic data is available on request, including a csv file with the prompt 
 
 Here are some examples of how to use the program:
 
-Translate data from alpaca_data.json in English to French and save it to output.json:
+Translate data from alpaca_data.json in English to Tamil and save it to output.json:
 
 ```bash
-python attiri_data.py -s en -t fr -d alpaca alpaca_data.json output.json
+python attiri_data.py \
+--source en \
+--target ta \
+--dataset alpaca \
+--input alpaca_data.json \
+--output output.json
 ```
 
-Note that the program may take some time to run, especially for large input files or when translating to many different languages.
+Alternatively ``-s`` and ``-t`` can be used instead of ``--source`` and ``--target`` and ``-i`` and ``-o`` can be used instead of ``--input`` and ``--output`` respectively.
 
 ## To-Do
 
 - [X] Translate alpaca json data into Tamil
 - [X] Translate nomic json data into Tamil
-- [ ] Clean training data
+- [X] Clean training data
 - [ ] Finetuning with lora uing Local GPU
 - [ ] Release vBeta model
 - [ ] Output model to hugging face
@@ -95,6 +100,12 @@ Note that the program may take some time to run, especially for large input file
 - [ ] Release v1.0 model
 - [ ] Output model to hugging face
 - [ ] Demo UI (Hugging Face / Hosted app)
+
+Future pipeline:
+
+- [ ] Prepare Toxicity and abuse detection dataset
+- [ ] Finetune to create safe language model
+- [ ] Extend to other languages
 
 ## Citation
 
