@@ -63,20 +63,12 @@ pip install -r requirements.txt
 | S.No | Dataset | Description | Count | I/O    |
 |------|---------|-------------|-------|--------|
 | 1    | [Attiri-Alpaca](data/attiri_alpaca_data.json)  | Tamil version of the Stanford Alpaca dataset | 52K| Instruction, Input, Output|
-| 2    | [Attiri-Nomic](data/attiri_nomic_data.json)  | Tamil version of the Nomic AI GPT4ALL dataset | 500K | Prompt, Response|
+| 2    | [Attiri-Nomic](https://drive.google.com/drive/folders/1_uNWzjNJ8R-57Rd6N-ybYisDf6Ig8-eG?usp=share_link)  | Tamil version of the Nomic AI GPT4ALL dataset | 500K | Prompt, Response|
 | 3    | [IndicCorp](https://ai4bharat.iitm.ac.in/corpora)| A single large text file containing one sentence per line. The publicly released version is randomly shuffled, untokenized and deduplicated. | 31.5M| Sentences|
 
 ``attiri_data.py`` translates instruction data for the Alpaca dataset from one language to another using the Google Translate API. The program is built with Click and tqdm for command-line argument parsing and progress tracking, respectively.
 
-To run the program, use the following command:
-
-```bash
-python attiri_data.py -s [SOURCE] -t [TARGET] -d [DATASET] [INPUT FILE] [OUTPUT FILE]
-```
-
-Replace [SOURCE] with the source language you want to translate from (e.g. en for English), [TARGET] with the target language you want to translate to (e.g. fr for French), [INPUT FILE] with the path to the JSON input file, and [OUTPUT FILE] with the path to the JSON output file. Replace [DATASET] with the dataset you want to translate (e.g. ``alpaca`` or ``nomic``).
-
-The -s option is optional and will default to automatic language detection if not specified. Note that the input file must exist, but the output file will be created by the program if it does not already exist. If the output file already exists, it will be overwritten.
+Attiri Nomic data is available on request, including a csv file with the prompt and response in English and their corresponding tamil translations. To Request : [Click Here](https://drive.google.com/drive/folders/1_uNWzjNJ8R-57Rd6N-ybYisDf6Ig8-eG?usp=share_link)
 
 ## Usage
 
