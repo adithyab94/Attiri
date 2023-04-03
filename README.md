@@ -61,7 +61,7 @@ pip install -r requirements.txt
 | S.No | Dataset | Description | Count | I/O    |
 |------|---------|-------------|-------|--------|
 | 1    | [Attiri-Alpaca](data/attiri_alpaca_data.json)  | Tamil version of the Stanford Alpaca dataset | 52K| Instruction, Input, Output|
-| 2    | [Attiri-Nomic](data/attiri_nomic_data.json)  | Tamil version of the Nomic dataset | 500K | Prompt, Response|
+| 2    | [Attiri-Nomic](data/attiri_nomic_data.json)  | Tamil version of the Nomic AI GPT4ALL dataset | 500K | Prompt, Response|
 | 3    | [IndicCorp](https://ai4bharat.iitm.ac.in/corpora)| A single large text file containing one sentence per line. The publicly released version is randomly shuffled, untokenized and deduplicated. | 31.5M| Sentences|
 
 ``attiri_data.py`` translates instruction data for the Alpaca dataset from one language to another using the Google Translate API. The program is built with Click and tqdm for command-line argument parsing and progress tracking, respectively.
@@ -91,16 +91,23 @@ Note that the program may take some time to run, especially for large input file
 ## TODO
 
 - [X] Translate alpaca json data into Tamil
-- [ ] Translate nomic json data into Tamil
+- [X] Translate nomic json data into Tamil
 - [ ] Clean training data
-- [ ] Finetuning with lora
-- [ ] Release v1 model
+- [ ] Finetuning with lora uing Local GPU
+- [ ] Release vBeta model
 - [ ] Output model to hugging face
-- [ ] GUI demo
+- [ ] Demo UI (Hugging Face / Hosted app)
+- [ ] Finetuning with lora using Cloud GPU (8x A100s)
+- [ ] Release v1.0 model
+- [ ] Output model to hugging face
+- [ ] Demo UI (Hugging Face / Hosted app)
 
 ## Acknowledgments
 
 Thanks for the open source projects - [LLaMA](https://github.com/facebookresearch/llama), [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca), and [Alpaca-Lora](https://github.com/tloen/alpaca-lora) from which this project is inspired.
+
+Thanks to the [AI4Bharat](https://ai4bharat.iitm.ac.in/) team for the [IndicCorp](https://ai4bharat.iitm.ac.in/corpora) dataset.
+and [Nomic](https://github.com/nomic-ai/gpt4all) for the  GPT4ALL dataset.  
 
 ## License
 
@@ -110,14 +117,8 @@ This project is licensed under the GNU General Public License v3.0. See the [LIC
 
 The word "Attiri" (["அத்திரி"](https://agarathi.com/word/%E0%AE%85%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AE%BF)) is used by the poet Ilango in the famous Tamil epic Silappadikaram which acccording to the Tamil dictionary could be a camel, a distant relative of the Llamas and Alpacas.
 
-<p style="text-align: center;">
-
-  வான வண்கையன் அத்திரி ஏற
-
-  மான் அமர் நோக்கியும் வையம் ஏறிக்
-  
-  கோடி பல அடுக்கிய கொழிநிதிக் குப்பை..
-
-   *– கடலாடு காதை, சிலப்பதிகாரம்*
-
-</p>
+  வான வண்கையன் அத்திரி ஏற\
+  மான் அமர் நோக்கியும் வையம் ஏறிக்\
+  கோடி பல அடுக்கிய கொழிநிதிக் குப்பை..\
+  \
+  *- கடலாடு காதை, சிலப்பதிகாரம்*
