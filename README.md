@@ -4,7 +4,7 @@
 
 <h1 align="center">
   <br />
-  Attiri: Dataset and an instruction-following large language model for Tamil by unlocking LLaMa and Stanford Alpaca
+  Attiri: Dataset and a LLaMa based instruction-following large language model for Tamil.
 </h1>
 
 <div align="center">
@@ -22,10 +22,6 @@ The repository contains
 - Dataset
 - Code to generate the data
 - TODO: Code to fine tune LLaMA 7B and possible the the models including PaLM
-
-## TODO
-
-- The code for fine-tuning the model.
 
 ## Table of Contents
 
@@ -88,6 +84,16 @@ python attiri_data.py -s en -t fr -d alpaca alpaca_data.json output.json
 ```
 
 Note that the program may take some time to run, especially for large input files or when translating to many different languages.
+
+## TODO
+
+- [X] Translate alpaca json data into Tamil
+- [ ] Translate nomic json data into Tamil
+- [ ] Clean training data
+- [ ] Finetuning with lora
+- [ ] Release v1 model
+- [ ] Output model to hugging face
+- [ ] GUI demo
 
 ## Acknowledgments
 
