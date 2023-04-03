@@ -91,7 +91,7 @@ Note that the program may take some time to run, especially for large input file
 - [ ] Release vBeta model
 - [ ] Output model to hugging face
 - [ ] Demo UI (Hugging Face / Hosted app)
-- [ ] Finetuning with lora using Cloud GPU (8x A100s)
+- [ ] Finetuning with lora using Cloud GPU (minimum: 8x A100s 80GB memory)
 - [ ] Release v1.0 model
 - [ ] Output model to hugging face
 - [ ] Demo UI (Hugging Face / Hosted app)

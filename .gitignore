@@ -5,4 +5,5 @@ data/csv
 nomic
 *.csv
 data/data.jsonl
+data/attiri_nomic_data.json
 __pycache__
