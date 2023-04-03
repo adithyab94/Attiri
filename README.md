@@ -4,7 +4,7 @@
 
 <h1 align="center">
   <br />
-  Attiri: Dataset and a LLaMa based instruction-following large language model for Tamil.
+  Attiri: Dataset and a LLaMa based instruction-following large language model for Tamil
 </h1>
 
 <div align="center">
@@ -29,10 +29,12 @@ The repository contains
    1. [Setup](#setup)
    2. [Dataset](#dataset)
 2. [Usage](#usage)
-3. [License](#license)
-4. [TODO](#todo)
-5. [Acknowledgments](#acknowledgments)
-6. [License](#license)
+3. [TODO](#to-do)
+4. [Citation](#citation)
+5. [To Contribute](#to-contribute)
+6. [Acknowledgments](#acknowledgments)
+7. [License](#license)
+8. [Fun-Fact](#fun-fact)
 
 ## Preparation
 
@@ -88,7 +90,7 @@ python attiri_data.py -s en -t fr -d alpaca alpaca_data.json output.json
 
 Note that the program may take some time to run, especially for large input files or when translating to many different languages.
 
-## TODO
+## To-Do
 
 - [X] Translate alpaca json data into Tamil
 - [X] Translate nomic json data into Tamil
@@ -101,6 +103,25 @@ Note that the program may take some time to run, especially for large input file
 - [ ] Release v1.0 model
 - [ ] Output model to hugging face
 - [ ] Demo UI (Hugging Face / Hosted app)
+
+## Citation
+
+Please cite the repo if you use the data or code in this repo. (Note: Naturally you should also cite the original LLaMA, Stanford Alpaca, and LoRa papers)
+
+```BibTeX
+@misc{Attiri,
+  author = {Adithya Balaji},
+  title = {Attiri: Dataset and a LLaMa based instruction-following large language model for Tamil},
+  year = {2023},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/adithyab94/Attiri}},
+}
+```
+
+## To Contribute
+
+This project is actively looking for collaborators. If you are interested in contributing to this project, please raise a pull request or [write to me](mailto:adithya.b94@gmail.com)
 
 ## Acknowledgments
 
@@ -122,3 +143,4 @@ The word "Attiri" (["அத்திரி"](https://agarathi.com/word/%E0%AE%85
   கோடி பல அடுக்கிய கொழிநிதிக் குப்பை..\
   \
   *- கடலாடு காதை, சிலப்பதிகாரம்*
+  
