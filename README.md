@@ -30,12 +30,15 @@ The repository contains
    2. [Dataset](#dataset)
 2. [Usage](#usage)
 3. [License](#license)
+4. [TODO](#todo)
+5. [Acknowledgments](#acknowledgments)
+6. [License](#license)
 
 ## Preparation
 
 ### Setup
 
-To use the program, you must have Python 3 and the necessary packages installed. You can install the necessary packages using pip:
+To use the program, you must have Python 3.9+ (recommended = 3.9) and the necessary packages installed. You can install the necessary packages using pip:
 
 Create a new Conda environment with Python 3.9:
 
@@ -57,8 +60,8 @@ pip install -r requirements.txt
 
 | S.No | Dataset | Description | Count | I/O    |
 |------|---------|-------------|-------|--------|
-| 1    | [Alpaca](data/attiri_alpaca_data.json)  | Tamil version of the Stanford Alpaca dataset | 52K| Instruction, Input, Output|
-| 2    | [Nomic]()  | Tamil version of the Nomic dataset | 500K | Prompt, Response|
+| 1    | [Attiri-Alpaca](data/attiri_alpaca_data.json)  | Tamil version of the Stanford Alpaca dataset | 52K| Instruction, Input, Output|
+| 2    | [Attiri-Nomic](data/attiri_nomic_data.json)  | Tamil version of the Nomic dataset | 500K | Prompt, Response|
 | 3    | [IndicCorp](https://ai4bharat.iitm.ac.in/corpora)| A single large text file containing one sentence per line. The publicly released version is randomly shuffled, untokenized and deduplicated. | 31.5M| Sentences|
 
 ``attiri_data.py`` translates instruction data for the Alpaca dataset from one language to another using the Google Translate API. The program is built with Click and tqdm for command-line argument parsing and progress tracking, respectively.
@@ -102,3 +105,19 @@ Thanks for the open source projects - [LLaMA](https://github.com/facebookresearc
 ## License
 
 This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
+
+## Fun-Fact
+
+The word "Attiri" (["அத்திரி"](https://agarathi.com/word/%E0%AE%85%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AE%BF)) is used by the poet Ilango in the famous Tamil epic Silappadikaram which acccording to the Tamil dictionary could be a camel, a distant relative of the Llamas and Alpacas.
+
+<p style="text-align: center;">
+
+  வான வண்கையன் அத்திரி ஏற
+
+  மான் அமர் நோக்கியும் வையம் ஏறிக்
+  
+  கோடி பல அடுக்கிய கொழிநிதிக் குப்பை..
+
+   *– கடலாடு காதை, சிலப்பதிகாரம்*
+
+</p>
