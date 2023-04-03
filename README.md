@@ -106,7 +106,7 @@ Note that the program may take some time to run, especially for large input file
 
 ## Citation
 
-Please cite the repo if you use the data or code in this repo. (Note: Naturally you should also cite the original LLaMA, Stanford Alpaca, and LoRa papers)
+Please cite this project if you use the dataset, model or code in this repo. (Note: Naturally you should also cite the original LLaMA, Stanford Alpaca, and LoRa papers)
 
 ```BibTeX
 @misc{Attiri,
@@ -143,4 +143,3 @@ The word "Attiri" (["அத்திரி"](https://agarathi.com/word/%E0%AE%85
   கோடி பல அடுக்கிய கொழிநிதிக் குப்பை..\
   \
   *- கடலாடு காதை, சிலப்பதிகாரம்*
-  
