@@ -4,7 +4,7 @@
 
 <h1 align="center">
   <br />
-  Attiri: Dataset and a LLaMa based instruction-following large language model for Tamil
+  Attiri: Dataset and an instruction-following large language model for Tamil based on LLaMa and Stanford Alpaca
 </h1>
 
 <div align="center">
