@@ -29,9 +29,11 @@ The repository contains
    1. [Setup](#setup)
    2. [Dataset](#dataset)
 2. [Usage](#usage)
-3. [TODO](#to-do)
-4. [Citation](#citation)
-5. [To Contribute](#to-contribute)
+    1. [Translate](#translate-data-from-english-to-tamil)
+    2. [Finetuning](#finetuning-the-model-for-tamil)
+3. [Citation](#citation)
+4. [To Contribute](#to-contribute)
+5. [To-Do](#to-do)
 6. [Acknowledgments](#acknowledgments)
 7. [License](#license)
 8. [Fun-Fact](#fun-fact)
@@ -74,9 +76,11 @@ Attiri Nomic data is available on request, including a csv file with the prompt 
 
 Here are some examples of how to use the program:
 
+### Translate data from English to Tamil
+
 Translate data from alpaca_data.json in English to Tamil and save it to output.json:
 
-```bash
+```shell
 python attiri_data.py \
 --source en \
 --target ta \
@@ -87,25 +91,17 @@ python attiri_data.py \
 
 Alternatively ``-s`` and ``-t`` can be used instead of ``--source`` and ``--target`` and ``-i`` and ``-o`` can be used instead of ``--input`` and ``--output`` respectively.
 
-## To-Do
+### Finetuning the model for tamil
 
-- [X] Translate alpaca json data into Tamil
-- [X] Translate nomic json data into Tamil
-- [X] Clean training data
-- [ ] Finetuning with lora uing Local GPU
-- [ ] Release vBeta model
-- [ ] Output model to hugging face
-- [ ] Demo UI (Hugging Face / Hosted app)
-- [ ] Finetuning with lora using Cloud GPU (minimum: 8x A100s 80GB memory)
-- [ ] Release v1.0 model
-- [ ] Output model to hugging face
-- [ ] Demo UI (Hugging Face / Hosted app)
+The `parameters.json` file contains the configuration parameters for running the model. Make sure to update the parameters in `parameters.json` according to your specific use case before running the model.
 
-Future pipeline:
+Now you can run finetune the model using the following steps:
 
-- [ ] Prepare Toxicity and abuse detection dataset
-- [ ] Finetune to create safe language model
-- [ ] Extend to other languages
+```python
+import attiri.finetune as ft
+trainer = ft.LlamaTrainer(BASE_MODEL_PATH, DATAL_PATH )
+trainer.train()
+```
 
 ## Citation
 
@@ -125,6 +121,37 @@ Please cite this project if you use the dataset, model or code in this repo. (No
 ## To Contribute
 
 This project is actively looking for collaborators. If you are interested in contributing to this project, please raise a pull request or [write to me](mailto:adithya.b94@gmail.com)
+
+
+## To-Do
+
+- [X] Translate alpaca json data into Tamil
+- [X] Translate nomic json data into Tamil
+- [X] Clean training data
+- [ ] Finetuning with LLaMA uing Local GPU
+- [ ] Release mvp model
+- [ ] Output model to hugging face
+- [ ] Demo UI (Hugging Face / Hosted app)
+- [ ] Finetuning with lora using Cloud GPU (minimum: 8x A100s 80GB memory)
+- [ ] Release v1.0 model
+- [ ] Output model to hugging face
+- [ ] Demo UI (Hugging Face / Hosted app)
+
+### Future pipeline
+
+#### Extending to other languages
+
+- [ ] Prepare dataset for other languages
+- [ ] Finetune to create language models
+
+#### Extending to other LLM
+
+- [ ] Finetune other LLMs like PaLM, Flan, GPT and Compare results
+
+#### Toxicity and Abuse Detection
+
+- [ ] Prepare Toxicity and abuse detection dataset
+- [ ] Finetune to create safe language model
 
 ## Acknowledgments
 

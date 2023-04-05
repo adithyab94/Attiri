@@ -1,0 +1,13 @@
+{
+    "CUTOFF_LEN": 512,
+    "LORA_R": 8,
+    "LORA_ALPHA": 16,
+    "LORA_DROPOUT": 0.05,
+    "LORA_TARGET_MODULES": ["q_proj", "v_proj"],
+    "BATCH_SIZE": 128,
+    "MICRO_BATCH_SIZE": 4,
+    "GRADIENT_ACCUMULATION_STEPS": 32,
+    "LEARNING_RATE": 0.0003,
+    "TRAIN_STEPS": 300,
+    "OUTPUT_DIR": "experiments"
+}
