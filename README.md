@@ -21,7 +21,7 @@ The repository contains
 
 - Dataset
 - Code to generate the data
-- TODO: Code to fine tune LLaMA 7B and possible the the models including PaLM
+- Code to fine tune LLaMA 7B model
 
 ## Table of Contents
 
@@ -103,6 +103,28 @@ trainer = ft.LlamaTrainer(BASE_MODEL_PATH, DATAL_PATH )
 trainer.train()
 ```
 
+A minimum viable model weight is released to the huggingface model hub. You can find it [here](https://huggingface.co/adithya-balaji/attiri-llama). (Note this is not a fully working model yet. Further models will be released as the project progresses)
+
+To view a quick demo of the model, please follow the instructions below:
+
+Clone the alpaca-lora repository:
+
+```shell
+git clone https://github.com/tloen/alpaca-lora.git
+cd alpaca-lora
+git checkout a48d947
+```
+
+To launch the demo, run the following command:
+
+```shell
+python generate.py \
+  --load_8bit \
+  --base_model 'decapoda-research/llama-7b-hf' \
+  --lora_weights 'adithya-balaji/attiri-lama' \
+  --share_gradio
+```
+
 ## Citation
 
 Please cite this project if you use the dataset, model or code in this repo. (Note: Naturally you should also cite the original LLaMA, Stanford Alpaca, and LoRa papers)
@@ -122,27 +144,32 @@ Please cite this project if you use the dataset, model or code in this repo. (No
 
 This project is actively looking for collaborators. If you are interested in contributing to this project, please raise a pull request or [write to me](mailto:adithya.b94@gmail.com)
 
-
 ## To-Do
 
 - [X] Translate alpaca json data into Tamil
 - [X] Translate nomic json data into Tamil
 - [X] Clean training data
-- [ ] Finetuning with LLaMA uing Local GPU
-- [ ] Release mvp model
-- [ ] Output model to hugging face
-- [ ] Demo UI (Hugging Face / Hosted app)
-- [ ] Finetuning with lora using Cloud GPU (minimum: 8x A100s 80GB memory)
+- [X] Finetuning with LLaMA uing Local GPU
+- [X] Release mvp model
+- [X] Output model to hugging face
+- [X] Demo UI (Hugging Face) [``PARTIAL``:Self-hosted app]
+- [ ] Finetuning using Cloud GPU (minimum: 8x A100s 80GB memory)
 - [ ] Release v1.0 model
-- [ ] Output model to hugging face
+- [ ] Finetuning the 13B, 33B ,65B models using Cloud GPU (minimum: 8x A100s 80GB memory)
+- [ ] Output models to hugging face
 - [ ] Demo UI (Hugging Face / Hosted app)
 
 ### Future pipeline
 
+#### Datasets
+
+- [ ] Prepare organic dataset customized to suit Tamil language
+- [ ] Prepare organic dataset customized to suit Kondunthamizh and Romanized Tamil
+
 #### Extending to other languages
 
 - [ ] Prepare dataset for other languages
-- [ ] Finetune to create language models
+- [ ] Finetune to create language modelsgit 
 
 #### Extending to other LLM
 
