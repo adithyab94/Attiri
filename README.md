@@ -15,7 +15,10 @@
 
 </div>
 
-Attiri, an extension of the LLaMa, aims to build and share an instruction-following LLaMA model for the Tamil language. Our project includes the similar 52K data used for fine-tuning the original model but in Tamil language, as well as the code for generating the data and fine-tuning the model. As of now, the project is under development and will be available soon.
+Attiri, an extension of the LLaMa and Stanford Alpaca, aims to build and share an instruction-following language model for the Tamil language. 
+Recent breakthrough in LLM, such as LLaMA, LaMDA and GPT-4, have introduced the potential for Artificial General Intelligence (AGI) and sparked widespread attention from the industry. However, the high cost of training and deployment has made it difficult to promote transparent and open academic research in the field. In response, a project has taken steps to promote open research in the Tamil natural language processing (NLP) community by releasing the Tamil LLaMA model and the Alpaca large model as open-source resources. These models expand the Tamil vocabulary and improve basic semantic understanding by utilizing secondary pre-training on Tamil data. Additionally, the project uses Tamil instruction data for fine-tuning the Tamil LLaMA model, enhancing the model's ability to understand and execute instructions. It is important to note that these resources are solely intended for academic research purposes.
+
+ We also release a minimum viable model weight to the [huggingface model hub](https://huggingface.co/adithya-balaji/attiri-llama).
 
 The repository contains
 
@@ -169,7 +172,7 @@ This project is actively looking for collaborators. If you are interested in con
 #### Extending to other languages
 
 - [ ] Prepare dataset for other languages
-- [ ] Finetune to create language modelsgit 
+- [ ] Finetune to create language models
 
 #### Extending to other LLM
 
@@ -179,6 +182,18 @@ This project is actively looking for collaborators. If you are interested in con
 
 - [ ] Prepare Toxicity and abuse detection dataset
 - [ ] Finetune to create safe language model
+
+## Results
+
+LLaMA 7B model is not finetuned for Tamil. The model is finetuned for languages with Latin script. The Alpaca model hence performs poorly for tamil prompts.
+![Llama response](assets/stanford.png)
+
+On the other hand, ChatGPT performs better comparitively but it doesnt generate meaningful responses.
+![chatgpt response](assets/chatgpt.png)
+
+Attiri model is finetuned for Tamil and hence performs better than Alpaca just with the pre-release model. Hence it shows great potential to have a large language model customized for Tamil.
+
+![Attiri response](assets/attiri.png)
 
 ## Acknowledgments
 
