@@ -186,10 +186,10 @@ This project is actively looking for collaborators. If you are interested in con
 ## Results
 
 LLaMA 7B model is not finetuned for Tamil. The model is finetuned for languages with Latin script. The Alpaca model hence performs poorly for tamil prompts.
-![Llama response](assets/stanford.png)
+![Llama response](assets/stanford.PNG)
 
 On the other hand, ChatGPT performs better comparitively but it doesnt generate meaningful responses.
-![chatgpt response](assets/chatgpt.png)
+![chatgpt response](assets/chatgpt.PNG)
 
 Attiri model is finetuned for Tamil and hence performs better than Alpaca just with the pre-release model. Hence it shows great potential to have a large language model customized for Tamil.
 
